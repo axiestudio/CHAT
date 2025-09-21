@@ -1,8 +1,8 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "installCommand": "npm install",
-  "devCommand": "npm start",
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/build",
+  "installCommand": "cd frontend && npm install",
+  "devCommand": "cd frontend && npm start",
   "env": {
     "REACT_APP_API_URL": "https://worthwhile-pelican-axiestudio-7ed1c7d6.koyeb.app/api/v1"
   },
