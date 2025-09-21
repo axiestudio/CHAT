@@ -1,0 +1,480 @@
+{
+  "data": {
+    "edges": [
+      {
+        "id": "reactflow__edge-ChatInput-8b9b9-FileComponent-64645",
+        "source": "ChatInput-8b9b9",
+        "target": "FileComponent-64645",
+        "animated": false,
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-8b9b9",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "path",
+            "id": "FileComponent-64645",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "message"
+          }
+        }
+      },
+      {
+        "id": "reactflow__edge-FileComponent-64645-TextSplitter-4746c",
+        "source": "FileComponent-64645",
+        "target": "TextSplitter-4746c",
+        "animated": false,
+        "data": {
+          "sourceHandle": {
+            "dataType": "FileComponent",
+            "id": "FileComponent-64645",
+            "name": "output",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "documents",
+            "id": "TextSplitter-4746c",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "data"
+          }
+        }
+      },
+      {
+        "id": "reactflow__edge-OpenAIEmbeddings-ace1e-ChromaDB-8dc56",
+        "source": "OpenAIEmbeddings-ace1e",
+        "target": "ChromaDB-8dc56",
+        "animated": false,
+        "data": {
+          "sourceHandle": {
+            "dataType": "OpenAIEmbeddings",
+            "id": "OpenAIEmbeddings-ace1e",
+            "name": "output",
+            "output_types": [
+              "Embeddings"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding",
+            "id": "ChromaDB-8dc56",
+            "inputTypes": [
+              "Embeddings"
+            ],
+            "type": "embeddings"
+          }
+        }
+      },
+      {
+        "id": "reactflow__edge-OpenAIModel-d4dd5-ChatOutput-14927",
+        "source": "OpenAIModel-d4dd5",
+        "target": "ChatOutput-14927",
+        "animated": false,
+        "data": {
+          "sourceHandle": {
+            "dataType": "OpenAIModel",
+            "id": "OpenAIModel-d4dd5",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "ChatOutput-14927",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "message"
+          }
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "type": "ChatInput",
+          "node": {
+            "template": {
+              "input_value": {
+                "type": "str",
+                "required": true,
+                "show": true,
+                "name": "input_value",
+                "display_name": "Input Text",
+                "value": ""
+              },
+              "should_store_message": {
+                "type": "bool",
+                "required": false,
+                "show": true,
+                "name": "should_store_message",
+                "display_name": "Store Messages",
+                "value": true
+              },
+              "sender": {
+                "type": "str",
+                "required": false,
+                "show": true,
+                "name": "sender",
+                "display_name": "Sender Type",
+                "value": "User"
+              },
+              "files": {
+                "type": "file",
+                "required": false,
+                "show": true,
+                "name": "files",
+                "display_name": "Files",
+                "value": ""
+              }
+            },
+            "description": "Get chat inputs from the Playground",
+            "base_classes": [
+              "Component"
+            ],
+            "display_name": "Chat Input",
+            "custom_fields": {},
+            "output_types": [
+              "Message"
+            ],
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "files"
+            ]
+          },
+          "id": "ChatInput-8b9b9"
+        },
+        "id": "ChatInput-8b9b9",
+        "position": {
+          "x": 100,
+          "y": 100
+        },
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "type": "FileComponent",
+          "node": {
+            "template": {
+              "path": {
+                "type": "str",
+                "required": false,
+                "show": true,
+                "name": "path",
+                "display_name": "File Path",
+                "value": ""
+              }
+            },
+            "description": "Load and process files (PDF, TXT, DOCX, etc.)",
+            "base_classes": [
+              "Component"
+            ],
+            "display_name": "File",
+            "custom_fields": {},
+            "output_types": [
+              "Data"
+            ],
+            "field_order": [
+              "path"
+            ]
+          },
+          "id": "FileComponent-64645"
+        },
+        "id": "FileComponent-64645",
+        "position": {
+          "x": 400,
+          "y": 100
+        },
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "type": "TextSplitter",
+          "node": {
+            "template": {
+              "documents": {
+                "type": "data",
+                "required": true,
+                "show": true,
+                "name": "documents",
+                "display_name": "Documents",
+                "value": ""
+              },
+              "chunk_size": {
+                "type": "int",
+                "required": false,
+                "show": true,
+                "name": "chunk_size",
+                "display_name": "Chunk Size",
+                "value": 1000
+              },
+              "chunk_overlap": {
+                "type": "int",
+                "required": false,
+                "show": true,
+                "name": "chunk_overlap",
+                "display_name": "Chunk Overlap",
+                "value": 200
+              }
+            },
+            "description": "Split text into chunks for processing",
+            "base_classes": [
+              "Component"
+            ],
+            "display_name": "Text Splitter",
+            "custom_fields": {},
+            "output_types": [
+              "Data"
+            ],
+            "field_order": [
+              "documents",
+              "chunk_size",
+              "chunk_overlap"
+            ]
+          },
+          "id": "TextSplitter-4746c"
+        },
+        "id": "TextSplitter-4746c",
+        "position": {
+          "x": 700,
+          "y": 100
+        },
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "type": "OpenAIEmbeddings",
+          "node": {
+            "template": {
+              "api_key": {
+                "type": "str",
+                "required": false,
+                "show": true,
+                "name": "api_key",
+                "display_name": "OpenAI API Key",
+                "value": ""
+              },
+              "model": {
+                "type": "str",
+                "required": false,
+                "show": true,
+                "name": "model",
+                "display_name": "Model Name",
+                "value": ""
+              }
+            },
+            "description": "OpenAI text embedding models",
+            "base_classes": [
+              "Component"
+            ],
+            "display_name": "OpenAI Embeddings",
+            "custom_fields": {},
+            "output_types": [
+              "Embeddings"
+            ],
+            "field_order": [
+              "api_key",
+              "model"
+            ]
+          },
+          "id": "OpenAIEmbeddings-ace1e"
+        },
+        "id": "OpenAIEmbeddings-ace1e",
+        "position": {
+          "x": 100,
+          "y": 300
+        },
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "type": "ChromaDB",
+          "node": {
+            "template": {
+              "documents": {
+                "type": "data",
+                "required": true,
+                "show": true,
+                "name": "documents",
+                "display_name": "Documents",
+                "value": ""
+              },
+              "embedding": {
+                "type": "embeddings",
+                "required": false,
+                "show": true,
+                "name": "embedding",
+                "display_name": "Embedding Model",
+                "value": ""
+              },
+              "collection_name": {
+                "type": "str",
+                "required": false,
+                "show": true,
+                "name": "collection_name",
+                "display_name": "Collection Name",
+                "value": "documents"
+              }
+            },
+            "description": "Chroma vector database for semantic search",
+            "base_classes": [
+              "Component"
+            ],
+            "display_name": "Chroma",
+            "custom_fields": {},
+            "output_types": [
+              "Retriever"
+            ],
+            "field_order": [
+              "documents",
+              "embedding",
+              "collection_name"
+            ]
+          },
+          "id": "ChromaDB-8dc56"
+        },
+        "id": "ChromaDB-8dc56",
+        "position": {
+          "x": 400,
+          "y": 300
+        },
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "type": "OpenAIModel",
+          "node": {
+            "template": {
+              "input_value": {
+                "type": "str",
+                "required": true,
+                "show": true,
+                "name": "input_value",
+                "display_name": "Input",
+                "value": ""
+              },
+              "model_name": {
+                "type": "str",
+                "required": false,
+                "show": true,
+                "name": "model_name",
+                "display_name": "Model Name",
+                "value": "gpt-3.5-turbo"
+              },
+              "temperature": {
+                "type": "float",
+                "required": false,
+                "show": true,
+                "name": "temperature",
+                "display_name": "Temperature",
+                "value": 0.7
+              },
+              "max_tokens": {
+                "type": "int",
+                "required": false,
+                "show": true,
+                "name": "max_tokens",
+                "display_name": "Max Tokens",
+                "value": 1000
+              },
+              "api_key": {
+                "type": "str",
+                "required": false,
+                "show": true,
+                "name": "api_key",
+                "display_name": "OpenAI API Key",
+                "value": ""
+              }
+            },
+            "description": "OpenAI language models (GPT-3.5, GPT-4, etc.)",
+            "base_classes": [
+              "Component"
+            ],
+            "display_name": "OpenAI",
+            "custom_fields": {},
+            "output_types": [
+              "Message",
+              "LanguageModel"
+            ],
+            "field_order": [
+              "input_value",
+              "model_name",
+              "temperature",
+              "max_tokens",
+              "api_key"
+            ]
+          },
+          "id": "OpenAIModel-d4dd5"
+        },
+        "id": "OpenAIModel-d4dd5",
+        "position": {
+          "x": 700,
+          "y": 300
+        },
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "type": "ChatOutput",
+          "node": {
+            "template": {
+              "input_value": {
+                "type": "str",
+                "required": true,
+                "show": true,
+                "name": "input_value",
+                "display_name": "Text",
+                "value": ""
+              },
+              "should_store_message": {
+                "type": "bool",
+                "required": false,
+                "show": true,
+                "name": "should_store_message",
+                "display_name": "Store Messages",
+                "value": true
+              }
+            },
+            "description": "Display chat outputs in the Playground",
+            "base_classes": [
+              "Component"
+            ],
+            "display_name": "Chat Output",
+            "custom_fields": {},
+            "output_types": [],
+            "field_order": [
+              "input_value",
+              "should_store_message"
+            ]
+          },
+          "id": "ChatOutput-14927"
+        },
+        "id": "ChatOutput-14927",
+        "position": {
+          "x": 100,
+          "y": 500
+        },
+        "type": "genericNode"
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 1
+    }
+  },
+  "description": "Generated flow: Create a chatbot that can answer questions about PDF documents using RAG",
+  "name": "Generated Flow - Document_Qa",
+  "last_tested_version": "1.0.0"
+}

@@ -1,0 +1,243 @@
+{
+  "data": {
+    "edges": [
+      {
+        "id": "reactflow__edge-ChatInput-8e2e4-OpenAIModel-45702",
+        "source": "ChatInput-8e2e4",
+        "target": "OpenAIModel-45702",
+        "animated": false,
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-8e2e4",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "OpenAIModel-45702",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "message"
+          }
+        }
+      },
+      {
+        "id": "reactflow__edge-OpenAIModel-45702-ChatOutput-42dde",
+        "source": "OpenAIModel-45702",
+        "target": "ChatOutput-42dde",
+        "animated": false,
+        "data": {
+          "sourceHandle": {
+            "dataType": "OpenAIModel",
+            "id": "OpenAIModel-45702",
+            "name": "output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "ChatOutput-42dde",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "message"
+          }
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "type": "ChatInput",
+          "node": {
+            "template": {
+              "input_value": {
+                "type": "str",
+                "required": true,
+                "show": true,
+                "name": "input_value",
+                "display_name": "Input Text",
+                "value": ""
+              },
+              "should_store_message": {
+                "type": "bool",
+                "required": false,
+                "show": true,
+                "name": "should_store_message",
+                "display_name": "Store Messages",
+                "value": true
+              },
+              "sender": {
+                "type": "str",
+                "required": false,
+                "show": true,
+                "name": "sender",
+                "display_name": "Sender Type",
+                "value": "User"
+              },
+              "files": {
+                "type": "file",
+                "required": false,
+                "show": true,
+                "name": "files",
+                "display_name": "Files",
+                "value": ""
+              }
+            },
+            "description": "Get chat inputs from the Playground",
+            "base_classes": [
+              "Component"
+            ],
+            "display_name": "Chat Input",
+            "custom_fields": {},
+            "output_types": [
+              "Message"
+            ],
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "files"
+            ]
+          },
+          "id": "ChatInput-8e2e4"
+        },
+        "id": "ChatInput-8e2e4",
+        "position": {
+          "x": 100,
+          "y": 100
+        },
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "type": "OpenAIModel",
+          "node": {
+            "template": {
+              "input_value": {
+                "type": "str",
+                "required": true,
+                "show": true,
+                "name": "input_value",
+                "display_name": "Input",
+                "value": ""
+              },
+              "model_name": {
+                "type": "str",
+                "required": false,
+                "show": true,
+                "name": "model_name",
+                "display_name": "Model Name",
+                "value": "gpt-3.5-turbo"
+              },
+              "temperature": {
+                "type": "float",
+                "required": false,
+                "show": true,
+                "name": "temperature",
+                "display_name": "Temperature",
+                "value": 0.7
+              },
+              "max_tokens": {
+                "type": "int",
+                "required": false,
+                "show": true,
+                "name": "max_tokens",
+                "display_name": "Max Tokens",
+                "value": 1000
+              },
+              "api_key": {
+                "type": "str",
+                "required": false,
+                "show": true,
+                "name": "api_key",
+                "display_name": "OpenAI API Key",
+                "value": ""
+              }
+            },
+            "description": "OpenAI language models (GPT-3.5, GPT-4, etc.)",
+            "base_classes": [
+              "Component"
+            ],
+            "display_name": "OpenAI",
+            "custom_fields": {},
+            "output_types": [
+              "Message",
+              "LanguageModel"
+            ],
+            "field_order": [
+              "input_value",
+              "model_name",
+              "temperature",
+              "max_tokens",
+              "api_key"
+            ]
+          },
+          "id": "OpenAIModel-45702"
+        },
+        "id": "OpenAIModel-45702",
+        "position": {
+          "x": 400,
+          "y": 100
+        },
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "type": "ChatOutput",
+          "node": {
+            "template": {
+              "input_value": {
+                "type": "str",
+                "required": true,
+                "show": true,
+                "name": "input_value",
+                "display_name": "Text",
+                "value": ""
+              },
+              "should_store_message": {
+                "type": "bool",
+                "required": false,
+                "show": true,
+                "name": "should_store_message",
+                "display_name": "Store Messages",
+                "value": true
+              }
+            },
+            "description": "Display chat outputs in the Playground",
+            "base_classes": [
+              "Component"
+            ],
+            "display_name": "Chat Output",
+            "custom_fields": {},
+            "output_types": [],
+            "field_order": [
+              "input_value",
+              "should_store_message"
+            ]
+          },
+          "id": "ChatOutput-42dde"
+        },
+        "id": "ChatOutput-42dde",
+        "position": {
+          "x": 700,
+          "y": 100
+        },
+        "type": "genericNode"
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 1
+    }
+  },
+  "description": "Generated flow: Create a simple chatbot with OpenAI",
+  "name": "Generated Flow - Basic_Chat",
+  "last_tested_version": "1.0.0"
+}

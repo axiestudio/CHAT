@@ -1,0 +1,33 @@
+# Koyeb deployment configuration for AxieStudio AI Backend
+name: axiestudio-ai-backend
+services:
+  - name: backend
+    type: web
+    source:
+      git:
+        url: https://github.com/axiestudio/CHAT
+        branch: main
+        workdir: backend
+    build:
+      command: pip install -r requirements.txt
+    run:
+      command: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    env:
+      - name: OPENAI_API_KEY
+        secret: openai-api-key
+      - name: PYTHON_VERSION
+        value: "3.11"
+      - name: BACKEND_CORS_ORIGINS
+        value: '["https://*.vercel.app","https://*.koyeb.app"]'
+    regions:
+      - fra  # Frankfurt (free tier region)
+    instance_type: free  # Use free tier
+    ports:
+      - port: 8000
+        protocol: http
+    health_check:
+      http:
+        path: /health
+        port: 8000
+      initial_delay_seconds: 30
+      timeout_seconds: 10

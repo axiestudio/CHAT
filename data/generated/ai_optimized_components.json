@@ -1,0 +1,6363 @@
+{
+  "AgentQL": {
+    "name": "AgentQL",
+    "display_name": "Extract Web Data",
+    "description": "Extracts structured data from a web page using an AgentQL query or a Natural Language description.",
+    "category": "AGENTQL",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "msg",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "agent",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "AgentComponent": {
+    "name": "AgentComponent",
+    "display_name": "Model Provider",
+    "description": "brain",
+    "category": "AGENTS",
+    "primary_use_cases": [
+      "search",
+      "tool_usage",
+      "chat"
+    ],
+    "input_types": [
+      "DropdownInput"
+    ],
+    "output_types": [
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "dotdict"
+    ],
+    "common_connections": [
+      "MODELS",
+      "TOOLS",
+      "VECTORSTORES"
+    ],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "search",
+      "agent",
+      "processing"
+    ],
+    "complexity_score": 3
+  },
+  "MCPToolsComponent": {
+    "name": "MCPToolsComponent",
+    "display_name": "MCP Tools",
+    "description": "Connect to an MCP server to use its tools.",
+    "category": "AGENTS",
+    "primary_use_cases": [
+      "reasoning",
+      "tool_usage",
+      "autonomous_agent"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame"
+    ],
+    "common_connections": [
+      "MODELS",
+      "TOOLS",
+      "VECTORSTORES"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "agent",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "AIMLModelComponent": {
+    "name": "AIMLModelComponent",
+    "display_name": "AI/ML API",
+    "description": "Generates text using AI/ML API LLMs.",
+    "category": "AIML",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ChatOpenAI"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "AmazonBedrockEmbeddingsComponent": {
+    "name": "AmazonBedrockEmbeddingsComponent",
+    "display_name": "Model Id",
+    "description": "AmazonBedrockEmbeddingsComponent component",
+    "category": "AMAZON",
+    "primary_use_cases": [
+      "embeddings"
+    ],
+    "input_types": [],
+    "output_types": [
+      "BedrockEmbeddings"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "embedding"
+    ],
+    "complexity_score": 1
+  },
+  "AmazonBedrockComponent": {
+    "name": "AmazonBedrockComponent",
+    "display_name": "Model ID",
+    "description": "AmazonBedrockComponent component",
+    "category": "AMAZON",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat"
+    ],
+    "complexity_score": 1
+  },
+  "S3BucketUploaderComponent": {
+    "name": "S3BucketUploaderComponent",
+    "display_name": "S3 Bucket Uploader",
+    "description": "Uploads files to S3 bucket.",
+    "category": "AMAZON",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "AnthropicModelComponent": {
+    "name": "AnthropicModelComponent",
+    "display_name": "Anthropic",
+    "description": "Generate text using Anthropic",
+    "category": "ANTHROPIC",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "ApifyActorsComponent": {
+    "name": "ApifyActorsComponent",
+    "display_name": "Apify Actors",
+    "description": "",
+    "category": "APIFY",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "cast",
+      "dict",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "ArXivComponent": {
+    "name": "ArXivComponent",
+    "display_name": "arXiv",
+    "description": "Search and retrieve papers from arXiv.org",
+    "category": "ARXIV",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "results",
+      "error_data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "AssemblyAIGetSubtitles": {
+    "name": "AssemblyAIGetSubtitles",
+    "display_name": "AssemblyAI Get Subtitles",
+    "description": "Export your transcript in SRT or VTT format for subtitles and closed captions",
+    "category": "ASSEMBLYAI",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "error",
+      "result",
+      "transcript"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "AssemblyAILeMUR": {
+    "name": "AssemblyAILeMUR",
+    "display_name": "AssemblyAI LeMUR",
+    "description": "Apply Large Language Models to spoken data using the AssemblyAI LeMUR framework",
+    "category": "ASSEMBLYAI",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "error",
+      "error",
+      "error",
+      "error",
+      "t",
+      "error",
+      "result"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "AssemblyAIListTranscripts": {
+    "name": "AssemblyAIListTranscripts",
+    "display_name": "AssemblyAI List Transcripts",
+    "description": "Retrieve a list of transcripts from AssemblyAI with filtering options",
+    "category": "ASSEMBLYAI",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "transcripts"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "AssemblyAITranscriptionJobPoller": {
+    "name": "AssemblyAITranscriptionJobPoller",
+    "display_name": "AssemblyAI Poll Transcript",
+    "description": "Poll for the status of a transcription job using AssemblyAI",
+    "category": "ASSEMBLYAI",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "error",
+      "data",
+      "transcript"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "AssemblyAITranscriptionJobCreator": {
+    "name": "AssemblyAITranscriptionJobCreator",
+    "display_name": "AssemblyAI Start Transcript",
+    "description": "Create a transcription job for an audio file using AssemblyAI with advanced options",
+    "category": "ASSEMBLYAI",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "f",
+      "transcript",
+      "result"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "AzureChatOpenAIComponent": {
+    "name": "AzureChatOpenAIComponent",
+    "display_name": "Azure Endpoint",
+    "description": "AzureChatOpenAIComponent component",
+    "category": "AZURE",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "AzureOpenAIEmbeddingsComponent": {
+    "name": "AzureOpenAIEmbeddingsComponent",
+    "display_name": "Model",
+    "description": "AzureOpenAIEmbeddingsComponent component",
+    "category": "AZURE",
+    "primary_use_cases": [
+      "embeddings",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "embedding",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "QianfanChatEndpointComponent": {
+    "name": "QianfanChatEndpointComponent",
+    "display_name": "Model Name",
+    "description": "QianfanChatEndpointComponent component",
+    "category": "BAIDU",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "BingSearchAPIComponent": {
+    "name": "BingSearchAPIComponent",
+    "display_name": "Bing Search API",
+    "description": "Call the Bing Search API.",
+    "category": "BING",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "cast",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search",
+      "api"
+    ],
+    "complexity_score": 2
+  },
+  "CleanlabEvaluator": {
+    "name": "CleanlabEvaluator",
+    "display_name": "Cleanlab Evaluator",
+    "description": "Evaluates any LLM response using Cleanlab and outputs trust score and explanation.",
+    "category": "CLEANLAB",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "Message",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "CleanlabRAGEvaluator": {
+    "name": "CleanlabRAGEvaluator",
+    "display_name": "Cleanlab RAG Evaluator",
+    "description": "Evaluates context, query, and response from a RAG pipeline using Cleanlab and outputs trust metrics.",
+    "category": "CLEANLAB",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "Message",
+      "Message",
+      "f",
+      "f",
+      "f",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "CleanlabRemediator": {
+    "name": "CleanlabRemediator",
+    "display_name": "Cleanlab Remediator",
+    "description": "CleanlabRemediator component",
+    "category": "CLEANLAB",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "Message",
+      "Message",
+      "f",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "CloudflareWorkersAIEmbeddingsComponent": {
+    "name": "CloudflareWorkersAIEmbeddingsComponent",
+    "display_name": "Cloudflare account ID",
+    "description": "CloudflareWorkersAIEmbeddingsComponent component",
+    "category": "CLOUDFLARE",
+    "primary_use_cases": [
+      "embeddings",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "embedding",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "CohereEmbeddingsComponent": {
+    "name": "CohereEmbeddingsComponent",
+    "display_name": "Cohere Embeddings",
+    "description": "Generate embeddings using Cohere models.",
+    "category": "COHERE",
+    "primary_use_cases": [
+      "embeddings"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "embedding"
+    ],
+    "complexity_score": 1
+  },
+  "CohereComponent": {
+    "name": "CohereComponent",
+    "display_name": "Cohere Language Models",
+    "description": "Generate text using Cohere LLMs.",
+    "category": "COHERE",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ChatCohere"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "CohereRerankComponent": {
+    "name": "CohereRerankComponent",
+    "display_name": "Cohere Rerank",
+    "description": "Rerank documents using the Cohere API.",
+    "category": "COHERE",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "CohereRerank"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ComposioAPIComponent": {
+    "name": "ComposioAPIComponent",
+    "display_name": "Entity ID",
+    "description": "unplug",
+    "category": "COMPOSIO",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ComposioToolSet"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ComposioGitHubAPIComponent": {
+    "name": "ComposioGitHubAPIComponent",
+    "display_name": "Owner",
+    "description": "Create A Pull Request",
+    "category": "COMPOSIO",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ComposioGmailAPIComponent": {
+    "name": "ComposioGmailAPIComponent",
+    "display_name": "Recipient Email",
+    "description": "Send Email",
+    "category": "COMPOSIO",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ComposioGoogleCalendarAPIComponent": {
+    "name": "ComposioGoogleCalendarAPIComponent",
+    "display_name": "Max Results",
+    "description": "Update Google Event",
+    "category": "COMPOSIO",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ComposioOutlookAPIComponent": {
+    "name": "ComposioOutlookAPIComponent",
+    "display_name": "User Id",
+    "description": "Reply To Email",
+    "category": "COMPOSIO",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ComposioSlackAPIComponent": {
+    "name": "ComposioSlackAPIComponent",
+    "display_name": "Limit",
+    "description": "List Users",
+    "category": "COMPOSIO",
+    "primary_use_cases": [
+      "search",
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ConfluenceComponent": {
+    "name": "ConfluenceComponent",
+    "display_name": "Confluence",
+    "description": "Confluence wiki collaboration platform",
+    "category": "CONFLUENCE",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ConfluenceLoader",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "CrewAIAgentComponent": {
+    "name": "CrewAIAgentComponent",
+    "display_name": "CrewAI Agent",
+    "description": "Represents an agent of CrewAI.",
+    "category": "CREWAI",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "repr"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "agent",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "HierarchicalCrewComponent": {
+    "name": "HierarchicalCrewComponent",
+    "display_name": "Agents",
+    "description": "HierarchicalCrewComponent component",
+    "category": "CREWAI",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Crew"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "HierarchicalTaskComponent": {
+    "name": "HierarchicalTaskComponent",
+    "display_name": "Description",
+    "description": "HierarchicalTaskComponent component",
+    "category": "CREWAI",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "task"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "SequentialCrewComponent": {
+    "name": "SequentialCrewComponent",
+    "display_name": "Tasks",
+    "description": "SequentialCrewComponent",
+    "category": "CREWAI",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Crew"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "SequentialTaskComponent": {
+    "name": "SequentialTaskComponent",
+    "display_name": "Description",
+    "description": "SequentialTaskComponent component",
+    "category": "CREWAI",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "task"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "SequentialTaskAgentComponent": {
+    "name": "SequentialTaskAgentComponent",
+    "display_name": "Sequential Task Agent",
+    "description": "Creates a CrewAI Task and its associated Agent.",
+    "category": "CREWAI",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "agent",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "CustomComponent": {
+    "name": "CustomComponent",
+    "display_name": "Custom Component",
+    "description": "Use as a template to create your own component.",
+    "category": "CUSTOM_COMPONENT",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "APIRequestComponent": {
+    "name": "APIRequestComponent",
+    "display_name": "API Request",
+    "description": "Make HTTP requests using URL or cURL commands.",
+    "category": "DATA",
+    "primary_use_cases": [
+      "search",
+      "web_scraping",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "isinstance",
+      "Data",
+      "Data",
+      "Data",
+      "urlunparse",
+      "set_current_fields",
+      "result"
+    ],
+    "common_connections": [
+      "PROCESSING",
+      "EMBEDDINGS"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "CSVToDataComponent": {
+    "name": "CSVToDataComponent",
+    "display_name": "Load CSV",
+    "description": "Load a CSV file, CSV from a file path, or a valid CSV string and convert it to a list of Data",
+    "category": "DATA",
+    "primary_use_cases": [
+      "file_handling",
+      "web_scraping",
+      "data_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "result",
+      "error_message",
+      "error_message"
+    ],
+    "common_connections": [
+      "PROCESSING",
+      "EMBEDDINGS"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "DirectoryComponent": {
+    "name": "DirectoryComponent",
+    "display_name": "Directory",
+    "description": "Recursively load files from a directory.",
+    "category": "DATA",
+    "primary_use_cases": [
+      "search",
+      "web_scraping",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "valid_data"
+    ],
+    "common_connections": [
+      "PROCESSING",
+      "EMBEDDINGS"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "FileComponent": {
+    "name": "FileComponent",
+    "display_name": "File",
+    "description": "Loads content from one or more files.",
+    "category": "DATA",
+    "primary_use_cases": [
+      "file_handling",
+      "web_scraping",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "parse_text_file_to_data"
+    ],
+    "common_connections": [
+      "PROCESSING",
+      "EMBEDDINGS"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "JSONToDataComponent": {
+    "name": "JSONToDataComponent",
+    "display_name": "Load JSON",
+    "description": "JSONToDataComponent component",
+    "category": "DATA",
+    "primary_use_cases": [
+      "file_handling",
+      "web_scraping",
+      "data_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "msg",
+      "result",
+      "error_message",
+      "error_message"
+    ],
+    "common_connections": [
+      "PROCESSING",
+      "EMBEDDINGS"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "NewsSearchComponent": {
+    "name": "NewsSearchComponent",
+    "display_name": "News Search",
+    "description": "Searches Google News via RSS. Returns clean article data.",
+    "category": "DATA",
+    "primary_use_cases": [
+      "search",
+      "web_scraping",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "BeautifulSoup",
+      "f",
+      "f"
+    ],
+    "common_connections": [
+      "PROCESSING",
+      "EMBEDDINGS"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "RSSReaderComponent": {
+    "name": "RSSReaderComponent",
+    "display_name": "RSS Reader",
+    "description": "Fetches and parses an RSS feed.",
+    "category": "DATA",
+    "primary_use_cases": [
+      "file_handling",
+      "web_scraping",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame",
+      "f"
+    ],
+    "common_connections": [
+      "PROCESSING",
+      "EMBEDDINGS"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "SQLComponent": {
+    "name": "SQLComponent",
+    "display_name": "SQL Database",
+    "description": "Executes SQL queries on SQLAlchemy-compatible databases.",
+    "category": "DATA",
+    "primary_use_cases": [
+      "file_handling",
+      "web_scraping",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "result",
+      "result",
+      "df_result"
+    ],
+    "common_connections": [
+      "PROCESSING",
+      "EMBEDDINGS"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "database",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "URLComponent": {
+    "name": "URLComponent",
+    "display_name": "URL",
+    "description": "Fetch content from one or more web pages, following links recursively.",
+    "category": "DATA",
+    "primary_use_cases": [
+      "file_handling",
+      "web_scraping",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "bool",
+      "RecursiveUrlLoader",
+      "DataFrame",
+      "Message"
+    ],
+    "common_connections": [
+      "PROCESSING",
+      "EMBEDDINGS"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "WebhookComponent": {
+    "name": "WebhookComponent",
+    "display_name": "Webhook",
+    "description": "WebhookComponent component",
+    "category": "DATA",
+    "primary_use_cases": [
+      "file_handling",
+      "web_scraping",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "message"
+    ],
+    "common_connections": [
+      "PROCESSING",
+      "EMBEDDINGS"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "WebSearchComponent": {
+    "name": "WebSearchComponent",
+    "display_name": "Web Search",
+    "description": "Performs a basic DuckDuckGo search (HTML scraping). May be subject to rate limits.",
+    "category": "DATA",
+    "primary_use_cases": [
+      "search",
+      "web_scraping",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "bool",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "f"
+    ],
+    "common_connections": [
+      "PROCESSING",
+      "EMBEDDINGS"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "AstraDBCQLToolComponent": {
+    "name": "AstraDBCQLToolComponent",
+    "display_name": "Tool Name",
+    "description": "name",
+    "category": "DATASTAX",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "results",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "AstraDBToolComponent": {
+    "name": "AstraDBToolComponent",
+    "display_name": "Tool Name",
+    "description": "Search query to find relevant documents.",
+    "category": "DATASTAX",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "AstraAssistantManager": {
+    "name": "AstraAssistantManager",
+    "display_name": "Astra Assistant Agent",
+    "description": "Manages Assistant Interactions",
+    "category": "DATASTAX",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "processed_result"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "agent",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "AstraDBChatMemory": {
+    "name": "AstraDBChatMemory",
+    "display_name": "Astra DB Chat Memory",
+    "description": "Retrieves and store chat messages from Astra DB.",
+    "category": "DATASTAX",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "AstraDBChatMessageHistory"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "search",
+      "database"
+    ],
+    "complexity_score": 1
+  },
+  "AstraVectorizeComponent": {
+    "name": "AstraVectorizeComponent",
+    "display_name": "Provider",
+    "description": "+ (",
+    "category": "DATASTAX",
+    "primary_use_cases": [
+      "embeddings",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "embedding",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "CassandraChatMemory": {
+    "name": "CassandraChatMemory",
+    "display_name": "Cassandra Chat Memory",
+    "description": "Retrieves and store chat messages from Apache Cassandra.",
+    "category": "DATASTAX",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "CassandraChatMessageHistory"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "search",
+      "database"
+    ],
+    "complexity_score": 1
+  },
+  "AssistantsCreateAssistant": {
+    "name": "AssistantsCreateAssistant",
+    "display_name": "Create Assistant",
+    "description": "Creates an Assistant and returns it",
+    "category": "DATASTAX",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "AssistantsCreateThread": {
+    "name": "AssistantsCreateThread",
+    "display_name": "Create Assistant Thread",
+    "description": "Creates a thread and returns the thread id",
+    "category": "DATASTAX",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "Dotenv": {
+    "name": "Dotenv",
+    "display_name": "Dotenv",
+    "description": "Load .env file into env vars",
+    "category": "DATASTAX",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "GetEnvVar": {
+    "name": "GetEnvVar",
+    "display_name": "Get Environment Variable",
+    "description": "Gets the value of an environment variable from the system.",
+    "category": "DATASTAX",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "AssistantsGetAssistantName": {
+    "name": "AssistantsGetAssistantName",
+    "display_name": "Get Assistant name",
+    "description": "Assistant by id",
+    "category": "DATASTAX",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "AssistantsListAssistants": {
+    "name": "AssistantsListAssistants",
+    "display_name": "List Assistants",
+    "description": "Returns a list of assistant id",
+    "category": "DATASTAX",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "AssistantsRun": {
+    "name": "AssistantsRun",
+    "display_name": "Run Assistant",
+    "description": "Executes an Assistant Run against a thread",
+    "category": "DATASTAX",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "AmazonKendraRetrieverComponent": {
+    "name": "AmazonKendraRetrieverComponent",
+    "display_name": "Index ID",
+    "description": "AmazonKendraRetrieverComponent component",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search"
+    ],
+    "complexity_score": 1
+  },
+  "ChatLiteLLMModelComponent": {
+    "name": "ChatLiteLLMModelComponent",
+    "display_name": "LiteLLM",
+    "description": "`LiteLLM` collection of large language models.",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "CodeBlockExtractor": {
+    "name": "CodeBlockExtractor",
+    "display_name": "Code Block Extractor",
+    "description": "Extracts code block from text.",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search"
+    ],
+    "complexity_score": 1
+  },
+  "DocumentsToDataComponent": {
+    "name": "DocumentsToDataComponent",
+    "display_name": "Documents ⇢ Data",
+    "description": "Convert LangChain Documents into Data.",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "EmbedComponent": {
+    "name": "EmbedComponent",
+    "display_name": "Embed Texts",
+    "description": "Texts",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [
+      "embeddings",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "vectors"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "embedding",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ExtractKeyFromDataComponent": {
+    "name": "ExtractKeyFromDataComponent",
+    "display_name": "Extract Key From Data",
+    "description": "Extracts a key from a data.",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "return_data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "JSONDocumentBuilder": {
+    "name": "JSONDocumentBuilder",
+    "display_name": "Key",
+    "description": "JSONDocumentBuilder component",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ListFlowsComponent": {
+    "name": "ListFlowsComponent",
+    "display_name": "List Flows",
+    "description": "A component to list all available flows.",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "flows"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "MCPSse": {
+    "name": "MCPSse",
+    "display_name": "MCP Tools (SSE) [DEPRECATED]",
+    "description": "Connects to an MCP server over SSE and exposes it",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "MCPStdio": {
+    "name": "MCPStdio",
+    "display_name": "MCP Tools (stdio) [DEPRECATED]",
+    "description": "MCPStdio component",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "MergeDataComponent": {
+    "name": "MergeDataComponent",
+    "display_name": "Combine Data",
+    "description": "Combines data using different operations",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "empty_dataframe",
+      "combined_dataframe"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "MessageComponent": {
+    "name": "MessageComponent",
+    "display_name": "Message",
+    "description": "Creates a Message object given a Session ID.",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat"
+    ],
+    "complexity_score": 1
+  },
+  "MetalRetrieverComponent": {
+    "name": "MetalRetrieverComponent",
+    "display_name": "API Key",
+    "description": "MetalRetrieverComponent component",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "MetalRetriever"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search"
+    ],
+    "complexity_score": 1
+  },
+  "MultiQueryRetrieverComponent": {
+    "name": "MultiQueryRetrieverComponent",
+    "display_name": "MultiQueryRetriever",
+    "description": "Initialize from llm using default template.",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "RetrieverToolComponent": {
+    "name": "RetrieverToolComponent",
+    "display_name": "RetrieverTool",
+    "description": "Tool for interacting with retriever",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "create_retriever_tool"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search",
+      "agent"
+    ],
+    "complexity_score": 1
+  },
+  "SelectivePassThroughComponent": {
+    "name": "SelectivePassThroughComponent",
+    "display_name": "Selective Pass Through",
+    "description": "Passes the specified value if a specified condition is met.",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "value_to_pass"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "ShouldRunNextComponent": {
+    "name": "ShouldRunNextComponent",
+    "display_name": "Should Run Next",
+    "description": "Determines if a vertex is runnable.",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "SplitTextComponent": {
+    "name": "SplitTextComponent",
+    "display_name": "Input",
+    "description": "SplitTextComponent component",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "document_processing",
+      "parsing",
+      "text_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "StoreMessageComponent": {
+    "name": "StoreMessageComponent",
+    "display_name": "Store Message",
+    "description": "Stores a chat message.",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "await"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "database"
+    ],
+    "complexity_score": 1
+  },
+  "SubFlowComponent": {
+    "name": "SubFlowComponent",
+    "display_name": "Sub Flow [Deprecated]",
+    "description": "Generates a Component from a Flow, with all of its inputs, and ",
+    "category": "LOGIC",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "VectaraSelfQueryRetriverComponent": {
+    "name": "VectaraSelfQueryRetriverComponent",
+    "display_name": "Vector Store",
+    "description": "speech",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "VectorStoreRetrieverComponent": {
+    "name": "VectorStoreRetrieverComponent",
+    "display_name": "VectorStore Retriever",
+    "description": "A vector store retriever",
+    "category": "DEACTIVATED",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search",
+      "embedding",
+      "database"
+    ],
+    "complexity_score": 1
+  },
+  "DeepSeekModelComponent": {
+    "name": "DeepSeekModelComponent",
+    "display_name": "DeepSeek",
+    "description": "Generate text using DeepSeek LLMs.",
+    "category": "DEEPSEEK",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "ChunkDoclingDocumentComponent": {
+    "name": "ChunkDoclingDocumentComponent",
+    "display_name": "Data or DataFrame",
+    "description": "ChunkDoclingDocumentComponent component",
+    "category": "DOCLING",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "DoclingInlineComponent": {
+    "name": "DoclingInlineComponent",
+    "display_name": "Docling",
+    "description": "Uses Docling to process input documents running the Docling models locally.",
+    "category": "DOCLING",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "VlmPipelineOptions",
+      "DocumentConverter"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "DoclingRemoteComponent": {
+    "name": "DoclingRemoteComponent",
+    "display_name": "Docling Serve",
+    "description": "Uses Docling to process input documents connecting to your instance of Docling Serve.",
+    "category": "DOCLING",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ExportDoclingDocumentComponent": {
+    "name": "ExportDoclingDocumentComponent",
+    "display_name": "Data or DataFrame",
+    "description": "ExportDoclingDocumentComponent component",
+    "category": "DOCLING",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "DuckDuckGoSearchComponent": {
+    "name": "DuckDuckGoSearchComponent",
+    "display_name": "DuckDuckGo Search",
+    "description": "Search the web using DuckDuckGo with customizable result limits",
+    "category": "DUCKDUCKGO",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DuckDuckGoSearchRun",
+      "DataFrame",
+      "error_data",
+      "data_results"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "EmbeddingSimilarityComponent": {
+    "name": "EmbeddingSimilarityComponent",
+    "display_name": "Embedding Vectors",
+    "description": "Embeddings must have the same dimensions.",
+    "category": "EMBEDDINGS",
+    "primary_use_cases": [
+      "semantic_search",
+      "embeddings",
+      "vector_operations"
+    ],
+    "input_types": [],
+    "output_types": [
+      "similarity_data"
+    ],
+    "common_connections": [
+      "VECTORSTORES",
+      "DATA"
+    ],
+    "ai_selection_keywords": [
+      "search",
+      "embedding"
+    ],
+    "complexity_score": 1
+  },
+  "TextEmbedderComponent": {
+    "name": "TextEmbedderComponent",
+    "display_name": "Embedding Model",
+    "description": "TextEmbedderComponent component",
+    "category": "EMBEDDINGS",
+    "primary_use_cases": [
+      "embeddings",
+      "vector_operations",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [
+      "VECTORSTORES",
+      "DATA"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ExaSearchToolkit": {
+    "name": "ExaSearchToolkit",
+    "display_name": "Exa Search",
+    "description": "Exa Search toolkit for search and content retrieval",
+    "category": "EXA",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "agent",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "FirecrawlCrawlApi": {
+    "name": "FirecrawlCrawlApi",
+    "display_name": "API Key",
+    "description": "FirecrawlCrawlApi component",
+    "category": "FIRECRAWL",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "FirecrawlExtractApi": {
+    "name": "FirecrawlExtractApi",
+    "display_name": "API Key",
+    "description": "FirecrawlExtractApi component",
+    "category": "FIRECRAWL",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "FirecrawlMapApi": {
+    "name": "FirecrawlMapApi",
+    "display_name": "API Key",
+    "description": "FirecrawlMapApi component",
+    "category": "FIRECRAWL",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "FirecrawlScrapeApi": {
+    "name": "FirecrawlScrapeApi",
+    "display_name": "API Key",
+    "description": "FirecrawlScrapeApi component",
+    "category": "FIRECRAWL",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "GitLoaderComponent": {
+    "name": "GitLoaderComponent",
+    "display_name": "Git",
+    "description": "*.py",
+    "category": "GIT",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "any",
+      "bool",
+      "GitLoader",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "GitExtractorComponent": {
+    "name": "GitExtractorComponent",
+    "display_name": "GitExtractor",
+    "description": "Analyzes a Git repository and returns file contents and complete repository information",
+    "category": "GIT",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "result",
+      "error_result",
+      "result",
+      "error_result",
+      "directory_structure",
+      "error_message",
+      "content_list",
+      "error_result",
+      "text_content",
+      "error_message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "GleanSearchAPIComponent": {
+    "name": "GleanSearchAPIComponent",
+    "display_name": "DataFrame",
+    "description": "The search query",
+    "category": "GLEAN",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "GleanAPIWrapper",
+      "DataFrame",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "GmailLoaderComponent": {
+    "name": "GmailLoaderComponent",
+    "display_name": "Gmail Loader",
+    "description": "Loads emails from Gmail using provided credentials.",
+    "category": "GOOGLE",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "HumanMessage",
+      "ChatSession",
+      "ChatSession",
+      "Data",
+      "docs"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "BigQueryExecutorComponent": {
+    "name": "BigQueryExecutorComponent",
+    "display_name": "BigQuery",
+    "description": "Execute SQL queries on Google BigQuery.",
+    "category": "GOOGLE",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search"
+    ],
+    "complexity_score": 1
+  },
+  "GoogleDriveComponent": {
+    "name": "GoogleDriveComponent",
+    "display_name": "Google Drive Loader",
+    "description": "Loads documents from Google Drive using provided credentials.",
+    "category": "GOOGLE",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "GoogleDriveSearchComponent": {
+    "name": "GoogleDriveSearchComponent",
+    "display_name": "Google Drive Search",
+    "description": "Searches Google Drive files using provided credentials and query parameters.",
+    "category": "GOOGLE",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "GoogleGenerativeAIComponent": {
+    "name": "GoogleGenerativeAIComponent",
+    "display_name": "Google Generative AI",
+    "description": "Generate text using Google Generative AI.",
+    "category": "GOOGLE",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ChatGoogleGenerativeAI"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "GoogleGenerativeAIEmbeddingsComponent": {
+    "name": "GoogleGenerativeAIEmbeddingsComponent",
+    "display_name": "Google Generative AI Embeddings",
+    "description": "GoogleGenerativeAIEmbeddingsComponent component",
+    "category": "GOOGLE",
+    "primary_use_cases": [
+      "embeddings",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "HotaGoogleGenerativeAIEmbeddings"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "embedding",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "GoogleOAuthToken": {
+    "name": "GoogleOAuthToken",
+    "display_name": "Google OAuth Token",
+    "description": "Generates a JSON string with your Google OAuth token.",
+    "category": "GOOGLE",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "GoogleSearchAPICore": {
+    "name": "GoogleSearchAPICore",
+    "display_name": "Google Search API",
+    "description": "Call Google Search API and return results as a DataFrame.",
+    "category": "GOOGLE",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search",
+      "api"
+    ],
+    "complexity_score": 2
+  },
+  "GoogleSerperAPICore": {
+    "name": "GoogleSerperAPICore",
+    "display_name": "Serper Google Search API",
+    "description": "Calls the Serper.dev Google Search API and fetches the results.",
+    "category": "SERPER",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame",
+      "Message",
+      "GoogleSerperAPIWrapper",
+      "error_message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search",
+      "api"
+    ],
+    "complexity_score": 2
+  },
+  "GroqModel": {
+    "name": "GroqModel",
+    "display_name": "Groq API Key",
+    "description": "application/json",
+    "category": "GROQ",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ChatGroq"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat"
+    ],
+    "complexity_score": 1
+  },
+  "CalculatorComponent": {
+    "name": "CalculatorComponent",
+    "display_name": "Calculator",
+    "description": "Perform basic arithmetic operations on a given expression.",
+    "category": "HELPERS",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "float",
+      "float",
+      "Data",
+      "Data",
+      "Data",
+      "formatted_result",
+      "error_message",
+      "error_message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "CreateListComponent": {
+    "name": "CreateListComponent",
+    "display_name": "Create List",
+    "description": "Creates a list of texts.",
+    "category": "HELPERS",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "CurrentDateComponent": {
+    "name": "CurrentDateComponent",
+    "display_name": "Current Date",
+    "description": "Returns the current date and time in the selected timezone.",
+    "category": "HELPERS",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "Message",
+      "result",
+      "error_message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "IDGeneratorComponent": {
+    "name": "IDGeneratorComponent",
+    "display_name": "ID Generator",
+    "description": "Generates a unique ID.",
+    "category": "HELPERS",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "MemoryComponent": {
+    "name": "MemoryComponent",
+    "display_name": "Message History",
+    "description": "Stores or retrieves stored chat messages from Axie Studio tables or an external memory.",
+    "category": "HELPERS",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "cast",
+      "Message",
+      "DataFrame",
+      "set_current_fields",
+      "stored_message",
+      "stored",
+      "stored_text"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "search",
+      "database",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "OutputParserComponent": {
+    "name": "OutputParserComponent",
+    "display_name": "Output Parser",
+    "description": "Transforms the output of an LLM into a specified format.",
+    "category": "HELPERS",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "CommaSeparatedListOutputParser",
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "MessageStoreComponent": {
+    "name": "MessageStoreComponent",
+    "display_name": "Message Store",
+    "description": "Stores a chat message or text into Axie Studio tables or an external memory.",
+    "category": "HELPERS",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "stored_message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "database",
+      "api"
+    ],
+    "complexity_score": 1
+  },
+  "HomeAssistantControl": {
+    "name": "HomeAssistantControl",
+    "display_name": "Home Assistant Token",
+    "description": "Home Assistant service name. (One of turn_on, turn_off, toggle)",
+    "category": "HOMEASSISTANT",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ListHomeAssistantStates": {
+    "name": "ListHomeAssistantStates",
+    "display_name": "Home Assistant Token",
+    "description": "Filter domain (e.g., ",
+    "category": "HOMEASSISTANT",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "HuggingFaceEndpointsComponent": {
+    "name": "HuggingFaceEndpointsComponent",
+    "display_name": "Model ID",
+    "description": "HuggingFaceEndpointsComponent component",
+    "category": "HUGGINGFACE",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "HuggingFaceEndpoint",
+      "_attempt_create"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "WatsonxAIComponent": {
+    "name": "WatsonxAIComponent",
+    "display_name": "IBM watsonx.ai",
+    "description": "Generate text using IBM watsonx.ai foundation models.",
+    "category": "IBM",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "sorted",
+      "ChatWatsonx"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "CombinatorialReasonerComponent": {
+    "name": "CombinatorialReasonerComponent",
+    "display_name": "Combinatorial Reasoner",
+    "description": "Uses Combinatorial Optimization to construct an optimal prompt with embedded reasons. Sign up here:\\nhttps://forms.gle/oWNv2NKjBNaqqvCx6",
+    "category": "ICOSACOMPUTING",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat"
+    ],
+    "complexity_score": 2
+  },
+  "ChatInput": {
+    "name": "ChatInput",
+    "display_name": "Chat Input",
+    "description": "Get chat inputs from the Playground.",
+    "category": "INPUT_OUTPUT",
+    "primary_use_cases": [
+      "data_input",
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "message"
+    ],
+    "common_connections": [
+      "MODELS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ChatOutput": {
+    "name": "ChatOutput",
+    "display_name": "Chat Output",
+    "description": "Display a chat message in the Playground.",
+    "category": "INPUT_OUTPUT",
+    "primary_use_cases": [
+      "data_input",
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Source",
+      "safe_convert",
+      "message"
+    ],
+    "common_connections": [
+      "MODELS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "TextInputComponent": {
+    "name": "TextInputComponent",
+    "display_name": "Text Input",
+    "description": "Get user text inputs.",
+    "category": "INPUT_OUTPUT",
+    "primary_use_cases": [
+      "data_input",
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message"
+    ],
+    "common_connections": [
+      "MODELS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "TextOutputComponent": {
+    "name": "TextOutputComponent",
+    "display_name": "Text Output",
+    "description": "Sends text output via API.",
+    "category": "INPUT_OUTPUT",
+    "primary_use_cases": [
+      "data_input",
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [
+      "MODELS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "JigsawStackAIScraperComponent": {
+    "name": "JigsawStackAIScraperComponent",
+    "display_name": "AI Scraper",
+    "description": "Scrape any website instantly and get consistent structured data \\\n        in seconds without writing any css selector code",
+    "category": "JIGSAWSTACK",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 3
+  },
+  "JigsawStackAIWebSearchComponent": {
+    "name": "JigsawStackAIWebSearchComponent",
+    "display_name": "AI Web Search",
+    "description": "Effortlessly search the Web and get access to high-quality results powered with AI.",
+    "category": "JIGSAWSTACK",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "Message",
+      "Message",
+      "Message",
+      "f",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "JigsawStackFileReadComponent": {
+    "name": "JigsawStackFileReadComponent",
+    "display_name": "File Read",
+    "description": "Read any previously uploaded file seamlessly from \\\n        JigsawStack File Storage and use it in your AI applications.",
+    "category": "JIGSAWSTACK",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 3
+  },
+  "JigsawStackFileUploadComponent": {
+    "name": "JigsawStackFileUploadComponent",
+    "display_name": "File Upload",
+    "description": "Store any file seamlessly on JigsawStack File Storage and use it in your AI applications. \\\n        Supports various file types including images, documents, and more.",
+    "category": "JIGSAWSTACK",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 3
+  },
+  "JigsawStackImageGenerationComponent": {
+    "name": "JigsawStackImageGenerationComponent",
+    "display_name": "Image Generation",
+    "description": "Generate an image based on the given text by employing AI models like Flux, \\\n        Stable Diffusion, and other top models.",
+    "category": "JIGSAWSTACK",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 3
+  },
+  "JigsawStackNSFWComponent": {
+    "name": "JigsawStackNSFWComponent",
+    "display_name": "NSFW Detection",
+    "description": "Detect if image/video contains NSFW content",
+    "category": "JIGSAWSTACK",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "JigsawStackObjectDetectionComponent": {
+    "name": "JigsawStackObjectDetectionComponent",
+    "display_name": "Object Detection",
+    "description": "Perform object detection on images using JigsawStack",
+    "category": "JIGSAWSTACK",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "JigsawStackSentimentComponent": {
+    "name": "JigsawStackSentimentComponent",
+    "display_name": "Sentiment Analysis",
+    "description": "Analyze sentiment of text using JigsawStack AI",
+    "category": "JIGSAWSTACK",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "Message",
+      "Message",
+      "Message",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "JigsawStackTextToSQLComponent": {
+    "name": "JigsawStackTextToSQLComponent",
+    "display_name": "Text to SQL",
+    "description": "Convert natural language to SQL queries using JigsawStack AI",
+    "category": "JIGSAWSTACK",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "JigsawStackTextTranslateComponent": {
+    "name": "JigsawStackTextTranslateComponent",
+    "display_name": "Text Translate",
+    "description": "Translate text from one language to another with support for multiple text formats.",
+    "category": "JIGSAWSTACK",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "JigsawStackVOCRComponent": {
+    "name": "JigsawStackVOCRComponent",
+    "display_name": "VOCR",
+    "description": "Extract data from any document type in a consistent structure with fine-tuned \\\n        vLLMs for the highest accuracy",
+    "category": "JIGSAWSTACK",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 3
+  },
+  "CharacterTextSplitterComponent": {
+    "name": "CharacterTextSplitterComponent",
+    "display_name": "Character Text Splitter",
+    "description": "Split text by number of characters.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "CharacterTextSplitter"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "ConversationChainComponent": {
+    "name": "ConversationChainComponent",
+    "display_name": "ConversationChain",
+    "description": "Chain to have a conversation and load context from memory.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "result"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "database"
+    ],
+    "complexity_score": 2
+  },
+  "CSVAgentComponent": {
+    "name": "CSVAgentComponent",
+    "display_name": "CSV Agent",
+    "description": "Construct a CSV agent from a CSV and tools.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "agent",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "HtmlLinkExtractorComponent": {
+    "name": "HtmlLinkExtractorComponent",
+    "display_name": "HTML Link Extractor",
+    "description": "Extract hyperlinks from HTML content.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "LinkExtractorTransformer"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "JsonAgentComponent": {
+    "name": "JsonAgentComponent",
+    "display_name": "JsonAgent",
+    "description": "Construct a json agent from an LLM and tools.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "create_json_agent"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "agent"
+    ],
+    "complexity_score": 2
+  },
+  "LangChainHubPromptComponent": {
+    "name": "LangChainHubPromptComponent",
+    "display_name": "Your LangChain API Key",
+    "description": "LangChainHubPromptComponent component",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "prompt"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 2
+  },
+  "LanguageRecursiveTextSplitterComponent": {
+    "name": "LanguageRecursiveTextSplitterComponent",
+    "display_name": "Chunk Size",
+    "description": "LanguageRecursiveTextSplitterComponent component",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "SemanticTextSplitterComponent": {
+    "name": "SemanticTextSplitterComponent",
+    "display_name": "Data Inputs",
+    "description": "percentile",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "embeddings",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "embedding",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "LLMCheckerChainComponent": {
+    "name": "LLMCheckerChainComponent",
+    "display_name": "LLMCheckerChain",
+    "description": "Chain for question-answering with self-verification.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "result"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "LLMMathChainComponent": {
+    "name": "LLMMathChainComponent",
+    "display_name": "LLMMathChain",
+    "description": "Chain that interprets a prompt and executes python code to do math.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "result"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "NaturalLanguageTextSplitterComponent": {
+    "name": "NaturalLanguageTextSplitterComponent",
+    "display_name": "Natural Language Text Splitter",
+    "description": "Split text based on natural language boundaries, optimized for a specified language.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "NLTKTextSplitter"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "OpenAIToolsAgentComponent": {
+    "name": "OpenAIToolsAgentComponent",
+    "display_name": "Language Model",
+    "description": "OpenAIToolsAgentComponent component",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "create_openai_tools_agent"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "agent"
+    ],
+    "complexity_score": 2
+  },
+  "OpenAPIAgentComponent": {
+    "name": "OpenAPIAgentComponent",
+    "display_name": "OpenAPI Agent",
+    "description": "Agent to interact with OpenAPI API.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "create_openapi_agent"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "agent",
+      "api"
+    ],
+    "complexity_score": 2
+  },
+  "RecursiveCharacterTextSplitterComponent": {
+    "name": "RecursiveCharacterTextSplitterComponent",
+    "display_name": "Chunk Size",
+    "description": "RecursiveCharacterTextSplitterComponent component",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "RecursiveCharacterTextSplitter"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "RetrievalQAComponent": {
+    "name": "RetrievalQAComponent",
+    "display_name": "Retrieval QA",
+    "description": "Chain for question-answering querying sources from a retriever.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "RunnableExecComponent": {
+    "name": "RunnableExecComponent",
+    "display_name": "Runnable Executor",
+    "description": "Execute a runnable. It will try to guess the input and output keys.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "status"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat"
+    ],
+    "complexity_score": 2
+  },
+  "SelfQueryRetrieverComponent": {
+    "name": "SelfQueryRetrieverComponent",
+    "display_name": "Self Query Retriever",
+    "description": "Retriever that uses a vector store and an LLM to generate the vector store queries.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "SpiderTool": {
+    "name": "SpiderTool",
+    "display_name": "Spider API Key",
+    "description": "markdown",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "SQLAgentComponent": {
+    "name": "SQLAgentComponent",
+    "display_name": "SQLAgent",
+    "description": "Construct an SQL agent from an LLM and tools.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "create_sql_agent"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "agent"
+    ],
+    "complexity_score": 2
+  },
+  "SQLDatabaseComponent": {
+    "name": "SQLDatabaseComponent",
+    "display_name": "SQLDatabase",
+    "description": "SQL Database",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "SQLDatabase"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "database"
+    ],
+    "complexity_score": 2
+  },
+  "SQLGeneratorComponent": {
+    "name": "SQLGeneratorComponent",
+    "display_name": "Natural Language to SQL",
+    "description": "Generate SQL from natural language.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "query"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 2
+  },
+  "ToolCallingAgentComponent": {
+    "name": "ToolCallingAgentComponent",
+    "display_name": "Language Model",
+    "description": "ToolCallingAgentComponent component",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "create_tool_calling_agent"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "agent"
+    ],
+    "complexity_score": 2
+  },
+  "VectorStoreInfoComponent": {
+    "name": "VectorStoreInfoComponent",
+    "display_name": "VectorStoreInfo",
+    "description": "Information about a VectorStore",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "VectorStoreInfo"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "VectorStoreRouterAgentComponent": {
+    "name": "VectorStoreRouterAgentComponent",
+    "display_name": "VectorStoreRouterAgent",
+    "description": "Construct an agent from a Vector Store Router.",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "create_vectorstore_router_agent"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "embedding",
+      "agent",
+      "database"
+    ],
+    "complexity_score": 2
+  },
+  "XMLAgentComponent": {
+    "name": "XMLAgentComponent",
+    "display_name": "Language Model",
+    "description": "XMLAgentComponent component",
+    "category": "LANGCHAIN_UTILITIES",
+    "primary_use_cases": [
+      "search",
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "create_xml_agent"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "search",
+      "agent"
+    ],
+    "complexity_score": 2
+  },
+  "LangWatchComponent": {
+    "name": "LangWatchComponent",
+    "display_name": "Evaluator Name",
+    "description": "str",
+    "category": "LANGWATCH",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "f",
+      "f",
+      "f",
+      "f",
+      "error_message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "LMStudioModelComponent": {
+    "name": "LMStudioModelComponent",
+    "display_name": "LM Studio",
+    "description": "Generate text using LM Studio Local LLMs.",
+    "category": "LMSTUDIO",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ChatOpenAI"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "ConditionalRouterComponent": {
+    "name": "ConditionalRouterComponent",
+    "display_name": "If-Else",
+    "description": "Routes an input message to a corresponding output based on text comparison.",
+    "category": "LOGIC",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "bool",
+      "Message",
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "DataConditionalRouterComponent": {
+    "name": "DataConditionalRouterComponent",
+    "display_name": "Condition",
+    "description": "Route Data object(s) based on a condition applied to a specified key, including boolean validation.",
+    "category": "LOGIC",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "bool",
+      "Data",
+      "f",
+      "f",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 2
+  },
+  "FlowToolComponent": {
+    "name": "FlowToolComponent",
+    "display_name": "Flow as Tool [Deprecated]",
+    "description": "Construct a Tool from a function that runs the loaded Flow.",
+    "category": "LOGIC",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "agent"
+    ],
+    "complexity_score": 1
+  },
+  "ListenComponent": {
+    "name": "ListenComponent",
+    "display_name": "Listen",
+    "description": "A component to listen for a notification.",
+    "category": "LOGIC",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "SmartRouterComponent": {
+    "name": "SmartRouterComponent",
+    "display_name": "Smart Router",
+    "description": "Routes an input message using LLM-based categorization.",
+    "category": "LOGIC",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat"
+    ],
+    "complexity_score": 2
+  },
+  "LoopComponent": {
+    "name": "LoopComponent",
+    "display_name": "Loop",
+    "description": "LoopComponent component",
+    "category": "LOGIC",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NotifyComponent": {
+    "name": "NotifyComponent",
+    "display_name": "Notify",
+    "description": "A component to generate a notification to Get Notified component.",
+    "category": "LOGIC",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "cast",
+      "input_value"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "PassMessageComponent": {
+    "name": "PassMessageComponent",
+    "display_name": "Pass",
+    "description": "Forwards the input message, unchanged.",
+    "category": "LOGIC",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat"
+    ],
+    "complexity_score": 1
+  },
+  "RunFlowComponent": {
+    "name": "RunFlowComponent",
+    "display_name": "Run Flow",
+    "description": "RunFlowComponent component",
+    "category": "LOGIC",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "MaritalkModelComponent": {
+    "name": "MaritalkModelComponent",
+    "display_name": "MariTalk",
+    "description": "Generates text using MariTalk LLMs.",
+    "category": "MARITALK",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ChatMaritalk"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "Mem0MemoryComponent": {
+    "name": "Mem0MemoryComponent",
+    "display_name": "Mem0 Chat Memory",
+    "description": "Retrieves and stores chat messages using Mem0 memory storage.",
+    "category": "MEM0",
+    "primary_use_cases": [
+      "search",
+      "chat",
+      "embeddings"
+    ],
+    "input_types": [],
+    "output_types": [
+      "MemoryClient"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "search",
+      "embedding",
+      "database"
+    ],
+    "complexity_score": 1
+  },
+  "MistralAIModelComponent": {
+    "name": "MistralAIModelComponent",
+    "display_name": "MistralAI",
+    "description": "Generates text using MistralAI LLMs.",
+    "category": "MISTRAL",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ChatMistralAI"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "MistralAIEmbeddingsComponent": {
+    "name": "MistralAIEmbeddingsComponent",
+    "display_name": "MistralAI Embeddings",
+    "description": "Generate embeddings using MistralAI models.",
+    "category": "MISTRAL",
+    "primary_use_cases": [
+      "embeddings"
+    ],
+    "input_types": [],
+    "output_types": [
+      "MistralAIEmbeddings"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "embedding"
+    ],
+    "complexity_score": 1
+  },
+  "LanguageModelComponent": {
+    "name": "LanguageModelComponent",
+    "display_name": "Language Model",
+    "description": "Runs a language model given a specified provider.",
+    "category": "MODELS",
+    "primary_use_cases": [
+      "language_model",
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ChatOpenAI",
+      "ChatAnthropic",
+      "ChatGoogleGenerativeAI"
+    ],
+    "common_connections": [
+      "INPUT_OUTPUT",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "NeedleComponent": {
+    "name": "NeedleComponent",
+    "display_name": "Needle Retriever",
+    "description": "A retriever that uses the Needle API to search collections.",
+    "category": "NEEDLE",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NotDiamondComponent": {
+    "name": "NotDiamondComponent",
+    "display_name": "Not Diamond Router",
+    "description": "Call the right model at the right time with the world",
+    "category": "NOTDIAMOND",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "get_chat_result"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "AddContentToPage": {
+    "name": "AddContentToPage",
+    "display_name": "Markdown Text",
+    "description": "The markdown text to convert to Notion blocks.",
+    "category": "NOTION",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NotionPageCreator": {
+    "name": "NotionPageCreator",
+    "display_name": "Database ID",
+    "description": "The ID of the Notion database.",
+    "category": "NOTION",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NotionDatabaseProperties": {
+    "name": "NotionDatabaseProperties",
+    "display_name": "Database ID",
+    "description": "The ID of the Notion database.",
+    "category": "NOTION",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NotionListPages": {
+    "name": "NotionListPages",
+    "display_name": "Notion Secret",
+    "description": "The ID of the Notion database to query.",
+    "category": "NOTION",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "records"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NotionUserList": {
+    "name": "NotionUserList",
+    "display_name": "List Users ",
+    "description": "Retrieve users from Notion.",
+    "category": "NOTION",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "records"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NotionPageContent": {
+    "name": "NotionPageContent",
+    "display_name": "Page Content Viewer ",
+    "description": "Retrieve the content of a Notion page as plain text.",
+    "category": "NOTION",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NotionSearch": {
+    "name": "NotionSearch",
+    "display_name": "Notion Secret",
+    "description": "The search query text.",
+    "category": "NOTION",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "records"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NotionPageUpdate": {
+    "name": "NotionPageUpdate",
+    "display_name": "Page ID",
+    "description": "The ID of the Notion page to update.",
+    "category": "NOTION",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NovitaModelComponent": {
+    "name": "NovitaModelComponent",
+    "display_name": "Novita AI",
+    "description": "Generates text using Novita AI LLMs (OpenAI compatible).",
+    "category": "NOVITA",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "NVIDIAModelComponent": {
+    "name": "NVIDIAModelComponent",
+    "display_name": "NVIDIA",
+    "description": "Generates text using NVIDIA LLMs.",
+    "category": "NVIDIA",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ChatNVIDIA"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "NvidiaIngestComponent": {
+    "name": "NvidiaIngestComponent",
+    "display_name": "NVIDIA Retriever Extraction",
+    "description": "Multi-modal data extraction from documents using NVIDIA",
+    "category": "NVIDIA",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "agent",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NvidiaRerankComponent": {
+    "name": "NvidiaRerankComponent",
+    "display_name": "NVIDIA Rerank",
+    "description": "Rerank documents using the NVIDIA API.",
+    "category": "NVIDIA",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "NVIDIARerank"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "NvidiaSystemAssistComponent": {
+    "name": "NvidiaSystemAssistComponent",
+    "display_name": "NVIDIA System-Assist",
+    "description": "What is my GPU?",
+    "category": "NVIDIA",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "OlivyaComponent": {
+    "name": "OlivyaComponent",
+    "display_name": "Place Call",
+    "description": "A component to create an outbound call request from Olivya",
+    "category": "OLIVYA",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ChatOllamaComponent": {
+    "name": "ChatOllamaComponent",
+    "display_name": "Ollama",
+    "description": "Generate text using Ollama Local LLMs.",
+    "category": "OLLAMA",
+    "primary_use_cases": [
+      "chat",
+      "embeddings"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "embedding"
+    ],
+    "complexity_score": 1
+  },
+  "OllamaEmbeddingsComponent": {
+    "name": "OllamaEmbeddingsComponent",
+    "display_name": "Ollama Model",
+    "description": "OllamaEmbeddingsComponent component",
+    "category": "OLLAMA",
+    "primary_use_cases": [
+      "embeddings",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "embedding",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "OpenAIModelComponent": {
+    "name": "OpenAIModelComponent",
+    "display_name": "OpenAI",
+    "description": "Generates text using OpenAI LLMs.",
+    "category": "OPENAI",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "OpenRouterComponent": {
+    "name": "OpenRouterComponent",
+    "display_name": "OpenRouter",
+    "description": "error",
+    "category": "OPENROUTER",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "dict",
+      "ChatOpenAI"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat"
+    ],
+    "complexity_score": 1
+  },
+  "PerplexityComponent": {
+    "name": "PerplexityComponent",
+    "display_name": "Perplexity",
+    "description": "Generate text using Perplexity LLMs.",
+    "category": "PERPLEXITY",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ChatPerplexity"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "AlterMetadataComponent": {
+    "name": "AlterMetadataComponent",
+    "display_name": "Alter Metadata",
+    "description": "Adds/Removes Metadata Dictionary on inputs",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "data_objects"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "BatchRunComponent": {
+    "name": "BatchRunComponent",
+    "display_name": "Batch Run",
+    "description": "Runs an LLM on each row of a DataFrame column. If no column is specified, all columns are used.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "document_processing",
+      "parsing",
+      "text_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "CombineTextComponent": {
+    "name": "CombineTextComponent",
+    "display_name": "Combine Text",
+    "description": "Concatenate two text sources into a single text chunk using a specified delimiter.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "combined"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "TypeConverterComponent": {
+    "name": "TypeConverterComponent",
+    "display_name": "Type Convert",
+    "description": "Convert between different types (Message, Data, DataFrame)",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "document_processing",
+      "parsing",
+      "text_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "DataFrame",
+      "result",
+      "result",
+      "result"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "CreateDataComponent": {
+    "name": "CreateDataComponent",
+    "display_name": "Number of Fields",
+    "description": "{self.text_key}",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [
+      "DictInput"
+    ],
+    "output_types": [
+      "return_data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "DataFrameOperationsComponent": {
+    "name": "DataFrameOperationsComponent",
+    "display_name": "DataFrame Operations",
+    "description": "Perform various operations on a DataFrame.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "document_processing",
+      "parsing",
+      "text_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "DataOperationsComponent": {
+    "name": "DataOperationsComponent",
+    "display_name": "Data Operations",
+    "description": "Perform various operations on a Data object.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "document_processing",
+      "parsing",
+      "text_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "isinstance",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "comparison_func",
+      "Data",
+      "Data",
+      "set_current_fields",
+      "set_current_fields",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "Data",
+      "handler",
+      "Data",
+      "f",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "DataToDataFrameComponent": {
+    "name": "DataToDataFrameComponent",
+    "display_name": "Data → DataFrame",
+    "description": "DataToDataFrameComponent component",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "df_result"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ExtractDataKeyComponent": {
+    "name": "ExtractDataKeyComponent",
+    "display_name": "Extract Key",
+    "description": "Invalid input. Expected Data object or list of Data objects.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "result",
+      "result",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "FilterDataComponent": {
+    "name": "FilterDataComponent",
+    "display_name": "Filter Data",
+    "description": "Filters a Data object based on a list of keys.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "filtered_data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "DataFilterComponent": {
+    "name": "DataFilterComponent",
+    "display_name": "Filter Values",
+    "description": "DataFilterComponent component",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "str",
+      "str",
+      "str",
+      "str",
+      "f",
+      "filtered_data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "JSONCleaner": {
+    "name": "JSONCleaner",
+    "display_name": "JSON Cleaner",
+    "description": "JSONCleaner component",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "result"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "LambdaFilterComponent": {
+    "name": "LambdaFilterComponent",
+    "display_name": "Smart Function",
+    "description": "Uses an LLM to generate a function for filtering or transforming structured data.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "search",
+      "document_processing",
+      "text_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "LLMRouterComponent": {
+    "name": "LLMRouterComponent",
+    "display_name": "LLM Router",
+    "description": "Routes the input to the most appropriate LLM based on OpenRouter model specifications",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "chat",
+      "document_processing",
+      "text_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "error_msg",
+      "f",
+      "f",
+      "error_msg",
+      "f",
+      "data_output",
+      "data_output",
+      "message_output",
+      "message_output"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "MessageToDataComponent": {
+    "name": "MessageToDataComponent",
+    "display_name": "Message to Data",
+    "description": "Convert a Message object to a Data object",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "msg"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "ParserComponent": {
+    "name": "ParserComponent",
+    "display_name": "Parser",
+    "description": "Extracts text using a template.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "document_processing",
+      "parsing",
+      "text_processing"
+    ],
+    "input_types": [
+      "BoolInput"
+    ],
+    "output_types": [
+      "Message",
+      "combined_text",
+      "message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "ParseDataComponent": {
+    "name": "ParseDataComponent",
+    "display_name": "Data to Message",
+    "description": "Convert Data objects into Messages using any {field_name} from input data.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "result_string",
+      "data_list"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "ParseDataFrameComponent": {
+    "name": "ParseDataFrameComponent",
+    "display_name": "Parse DataFrame",
+    "description": "Hello",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "result_string"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ParseJSONDataComponent": {
+    "name": "ParseJSONDataComponent",
+    "display_name": "Parse JSON",
+    "description": "Convert and extract JSON fields.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "str"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "PromptComponent": {
+    "name": "PromptComponent",
+    "display_name": "Template",
+    "description": "PromptComponent component",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "document_processing",
+      "parsing",
+      "text_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DefaultPromptField",
+      "prompt"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "PythonREPLComponent": {
+    "name": "PythonREPLComponent",
+    "display_name": "Python Interpreter",
+    "description": "Run Python code with optional imports. Use print() to see the output.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "document_processing",
+      "parsing",
+      "text_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "Data",
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "RegexExtractorComponent": {
+    "name": "RegexExtractorComponent",
+    "display_name": "Regex Extractor",
+    "description": "Extract patterns from text using regular expressions.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "result",
+      "message",
+      "message",
+      "message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "SaveToFileComponent": {
+    "name": "SaveToFileComponent",
+    "display_name": "Save File",
+    "description": "Save data to a local file in the selected format.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "document_processing",
+      "parsing",
+      "text_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "Path",
+      "Path"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "SelectDataComponent": {
+    "name": "SelectDataComponent",
+    "display_name": "Data List",
+    "description": "SelectDataComponent component",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [],
+    "output_types": [
+      "selected_data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "StructuredOutputComponent": {
+    "name": "StructuredOutputComponent",
+    "display_name": "Structured Output",
+    "description": "Uses an LLM to generate structured data. Ideal for extraction and consistency.",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "chat",
+      "document_processing",
+      "text_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data",
+      "Data",
+      "Data",
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "agent",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "UpdateDataComponent": {
+    "name": "UpdateDataComponent",
+    "display_name": "Data",
+    "description": "{self.text_key}",
+    "category": "PROCESSING",
+    "primary_use_cases": [
+      "parsing",
+      "text_processing",
+      "data_transformation"
+    ],
+    "input_types": [
+      "DictInput"
+    ],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "PythonFunctionComponent": {
+    "name": "PythonFunctionComponent",
+    "display_name": "Python Function",
+    "description": "Define and execute a Python function that returns a Data object or a Message.",
+    "category": "PROTOTYPES",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "get_function",
+      "func",
+      "Message",
+      "function_code"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat"
+    ],
+    "complexity_score": 2
+  },
+  "RedisIndexChatMemory": {
+    "name": "RedisIndexChatMemory",
+    "display_name": "Redis Chat Memory",
+    "description": "Retrieves and store chat messages from Redis.",
+    "category": "REDIS",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "RedisChatMessageHistory"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "search",
+      "database"
+    ],
+    "complexity_score": 1
+  },
+  "SambaNovaComponent": {
+    "name": "SambaNovaComponent",
+    "display_name": "SambaNova",
+    "description": "Generate text using Sambanova LLMs.",
+    "category": "SAMBANOVA",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ChatSambaNovaCloud"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ScrapeGraphMarkdownifyApi": {
+    "name": "ScrapeGraphMarkdownifyApi",
+    "display_name": "ScrapeGraph API Key",
+    "description": "ScrapeGraphMarkdownifyApi component",
+    "category": "SCRAPEGRAPH",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ScrapeGraphSearchApi": {
+    "name": "ScrapeGraphSearchApi",
+    "display_name": "ScrapeGraph API Key",
+    "description": "ScrapeGraphSearchApi component",
+    "category": "SCRAPEGRAPH",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "ScrapeGraphSmartScraperApi": {
+    "name": "ScrapeGraphSmartScraperApi",
+    "display_name": "ScrapeGraph API Key",
+    "description": "ScrapeGraphSmartScraperApi component",
+    "category": "SCRAPEGRAPH",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "SearchComponent": {
+    "name": "SearchComponent",
+    "display_name": "Engine",
+    "description": "SearchComponent component",
+    "category": "SEARCHAPI",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "SearchApiAPIWrapper",
+      "DataFrame",
+      "results"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "SerpComponent": {
+    "name": "SerpComponent",
+    "display_name": "Serp Search API",
+    "description": "The search query",
+    "category": "SERPAPI",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [
+      "SerpAPIWrapper",
+      "SerpAPIWrapper",
+      "Message",
+      "results",
+      "result_string"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search"
+    ],
+    "complexity_score": 2
+  },
+  "TavilyExtractComponent": {
+    "name": "TavilyExtractComponent",
+    "display_name": "Tavily Extract API",
+    "description": "application/json",
+    "category": "TAVILY",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "data_results"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "TavilySearchComponent": {
+    "name": "TavilySearchComponent",
+    "display_name": "Tavily Search API",
+    "description": "application/json",
+    "category": "TAVILY",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "data_results"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search"
+    ],
+    "complexity_score": 1
+  },
+  "CalculatorToolComponent": {
+    "name": "CalculatorToolComponent",
+    "display_name": "Calculator [DEPRECATED]",
+    "description": "Perform basic arithmetic operations on a given expression.",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "utilities",
+      "external_apis",
+      "calculations"
+    ],
+    "input_types": [],
+    "output_types": [
+      "formatted_result",
+      "error_message",
+      "error_message",
+      "error_message"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "api"
+    ],
+    "complexity_score": 2
+  },
+  "GoogleSearchAPIComponent": {
+    "name": "GoogleSearchAPIComponent",
+    "display_name": "Google Search API [DEPRECATED]",
+    "description": "Call Google Search API.",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "search",
+      "utilities",
+      "external_apis"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Tool",
+      "GoogleSearchAPIWrapper",
+      "data"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "search",
+      "api"
+    ],
+    "complexity_score": 2
+  },
+  "GoogleSerperAPIComponent": {
+    "name": "GoogleSerperAPIComponent",
+    "display_name": "Google Serper API [DEPRECATED]",
+    "description": "The query to search for.",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "search",
+      "utilities",
+      "external_apis"
+    ],
+    "input_types": [],
+    "output_types": [
+      "GoogleSerperAPIWrapper",
+      "data_list"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "search",
+      "api"
+    ],
+    "complexity_score": 1
+  },
+  "PythonCodeStructuredTool": {
+    "name": "PythonCodeStructuredTool",
+    "display_name": "Python Code Structured",
+    "description": "structuredtool dataclass code to tool",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "document_processing",
+      "utilities",
+      "external_apis"
+    ],
+    "input_types": [
+      "MessageTextInput"
+    ],
+    "output_types": [
+      "dotdict",
+      "f"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "agent",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "PythonREPLToolComponent": {
+    "name": "PythonREPLToolComponent",
+    "display_name": "Python REPL [DEPRECATED]",
+    "description": "A tool for running Python code in a REPL environment.",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "utilities",
+      "external_apis",
+      "calculations"
+    ],
+    "input_types": [],
+    "output_types": [
+      "f"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "agent",
+      "api"
+    ],
+    "complexity_score": 1
+  },
+  "SearchAPIComponent": {
+    "name": "SearchAPIComponent",
+    "display_name": "Engine",
+    "description": "The search query",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "search",
+      "utilities",
+      "external_apis"
+    ],
+    "input_types": [],
+    "output_types": [
+      "SearchApiAPIWrapper",
+      "f",
+      "data_list"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "SearXNGToolComponent": {
+    "name": "SearXNGToolComponent",
+    "display_name": "SearXNG Search",
+    "description": "A component that searches for tools using SearXNG.",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "search",
+      "utilities",
+      "external_apis"
+    ],
+    "input_types": [],
+    "output_types": [
+      "f"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "search",
+      "agent",
+      "api"
+    ],
+    "complexity_score": 1
+  },
+  "SerpAPIComponent": {
+    "name": "SerpAPIComponent",
+    "display_name": "Serp Search API [DEPRECATED]",
+    "description": "The search query",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "search",
+      "utilities",
+      "external_apis"
+    ],
+    "input_types": [],
+    "output_types": [
+      "SerpAPIWrapper",
+      "SerpAPIWrapper",
+      "f",
+      "data_list"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "search",
+      "api"
+    ],
+    "complexity_score": 2
+  },
+  "TavilySearchToolComponent": {
+    "name": "TavilySearchToolComponent",
+    "display_name": "Tavily Search API",
+    "description": "The search query you want to execute with Tavily.",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "search",
+      "utilities",
+      "external_apis"
+    ],
+    "input_types": [],
+    "output_types": [
+      "error_message",
+      "error_message",
+      "error_message",
+      "data_results",
+      "error_message",
+      "error_message",
+      "error_message"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "WikidataAPIComponent": {
+    "name": "WikidataAPIComponent",
+    "display_name": "Wikidata API [Deprecated]",
+    "description": "The search query for Wikidata",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "search",
+      "utilities",
+      "external_apis"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "search",
+      "api"
+    ],
+    "complexity_score": 1
+  },
+  "WikipediaAPIComponent": {
+    "name": "WikipediaAPIComponent",
+    "display_name": "Wikipedia API [Deprecated]",
+    "description": "Call Wikipedia API.",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "document_processing",
+      "utilities",
+      "external_apis"
+    ],
+    "input_types": [],
+    "output_types": [
+      "cast",
+      "WikipediaAPIWrapper",
+      "data"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "YfinanceToolComponent": {
+    "name": "YfinanceToolComponent",
+    "display_name": "Yahoo! Finance [DEPRECATED]",
+    "description": "The stock symbol to retrieve data for.",
+    "category": "TOOLS",
+    "primary_use_cases": [
+      "utilities",
+      "external_apis",
+      "calculations"
+    ],
+    "input_types": [],
+    "output_types": [
+      "error_message"
+    ],
+    "common_connections": [
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "search",
+      "api"
+    ],
+    "complexity_score": 1
+  },
+  "ConvertAstraToTwelveLabs": {
+    "name": "ConvertAstraToTwelveLabs",
+    "display_name": "Convert Astra DB to Pegasus Input",
+    "description": "Converts Astra DB search results to inputs compatible with TwelveLabs Pegasus.",
+    "category": "TWELVELABS",
+    "primary_use_cases": [
+      "search",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "Message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "PegasusIndexVideo": {
+    "name": "PegasusIndexVideo",
+    "display_name": "TwelveLabs Pegasus Index Video",
+    "description": "Index videos using TwelveLabs and add the video_id to metadata.",
+    "category": "TWELVELABS",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "status_msg",
+      "f",
+      "f",
+      "error_msg",
+      "error_msg",
+      "f",
+      "error_msg",
+      "timeout_msg",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "SplitVideoComponent": {
+    "name": "SplitVideoComponent",
+    "display_name": "Split Video",
+    "description": "Split a video into multiple clips of specified duration.",
+    "category": "TWELVELABS",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "float",
+      "str"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "TwelveLabsPegasus": {
+    "name": "TwelveLabsPegasus",
+    "display_name": "TwelveLabs Pegasus",
+    "description": "Chat with videos using TwelveLabs Pegasus API.",
+    "category": "TWELVELABS",
+    "primary_use_cases": [
+      "chat",
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "Message",
+      "status_msg",
+      "f",
+      "f",
+      "f",
+      "f",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "VideoFileComponent": {
+    "name": "VideoFileComponent",
+    "display_name": "Video File",
+    "description": "Load a video file in common video formats.",
+    "category": "TWELVELABS",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "UnstructuredComponent": {
+    "name": "UnstructuredComponent",
+    "display_name": "Unstructured API",
+    "description": "UnstructuredComponent component",
+    "category": "UNSTRUCTURED",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 1
+  },
+  "AstraDBVectorStoreComponent": {
+    "name": "AstraDBVectorStoreComponent",
+    "display_name": "Name",
+    "description": "create_database",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "defaultdict",
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "AstraDBGraphVectorStoreComponent": {
+    "name": "AstraDBGraphVectorStoreComponent",
+    "display_name": "Astra DB Application Token",
+    "description": "AstraDBGraphVectorStoreComponent component",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "CassandraVectorStoreComponent": {
+    "name": "CassandraVectorStoreComponent",
+    "display_name": "Cassandra",
+    "description": "Cassandra Vector Store with search capabilities",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "CassandraGraphVectorStoreComponent": {
+    "name": "CassandraGraphVectorStoreComponent",
+    "display_name": "Cassandra Graph",
+    "description": "Cassandra Graph Vector Store",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "ChromaVectorStoreComponent": {
+    "name": "ChromaVectorStoreComponent",
+    "display_name": "Collection Name",
+    "description": "Chroma",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "chroma_collection_to_data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "ClickhouseVectorStoreComponent": {
+    "name": "ClickhouseVectorStoreComponent",
+    "display_name": "Clickhouse",
+    "description": "Clickhouse Vector Store with search capabilities",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "CouchbaseVectorStoreComponent": {
+    "name": "CouchbaseVectorStoreComponent",
+    "display_name": "Couchbase",
+    "description": "Couchbase Vector Store with search capabilities",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "ElasticsearchVectorStoreComponent": {
+    "name": "ElasticsearchVectorStoreComponent",
+    "display_name": "Elasticsearch URL",
+    "description": "ElasticsearchStore",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "retrieved_data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "FaissVectorStoreComponent": {
+    "name": "FaissVectorStoreComponent",
+    "display_name": "Index Name",
+    "description": "FaissVectorStoreComponent component",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "str",
+      "Path",
+      "Path",
+      "docs_to_data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 3
+  },
+  "GraphRAGComponent": {
+    "name": "GraphRAGComponent",
+    "display_name": "Embedding Model",
+    "description": "GraphRAGComponent component",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "docs_to_data",
+      "tuple",
+      "tuple"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 3
+  },
+  "HCDVectorStoreComponent": {
+    "name": "HCDVectorStoreComponent",
+    "display_name": "Collection Name",
+    "description": "HCDVectorStoreComponent component",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "LocalDBComponent": {
+    "name": "LocalDBComponent",
+    "display_name": "Mode",
+    "description": "Chroma",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "str",
+      "DataFrame",
+      "chroma_collection_to_data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 3
+  },
+  "MilvusVectorStoreComponent": {
+    "name": "MilvusVectorStoreComponent",
+    "display_name": "Collection Name",
+    "description": "MilvusVectorStoreComponent component",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "MongoVectorStoreComponent": {
+    "name": "MongoVectorStoreComponent",
+    "display_name": "MongoDB Atlas",
+    "description": "MongoDB Atlas Vector Store with search capabilities",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "MongoDBAtlasVectorSearch",
+      "SearchIndexModel",
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 3
+  },
+  "OpenSearchVectorStoreComponent": {
+    "name": "OpenSearchVectorStoreComponent",
+    "display_name": "OpenSearch URL",
+    "description": "OpenSearchVectorSearch",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "retrieved_data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "PGVectorStoreComponent": {
+    "name": "PGVectorStoreComponent",
+    "display_name": "PGVector",
+    "description": "PGVector Vector Store with search capabilities",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "PineconeVectorStoreComponent": {
+    "name": "PineconeVectorStoreComponent",
+    "display_name": "Pinecone",
+    "description": "Pinecone Vector Store with search capabilities",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "float",
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "QdrantVectorStoreComponent": {
+    "name": "QdrantVectorStoreComponent",
+    "display_name": "Qdrant",
+    "description": "Qdrant Vector Store with search capabilities",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "RedisVectorStoreComponent": {
+    "name": "RedisVectorStoreComponent",
+    "display_name": "Redis Server Connection String",
+    "description": "RedisVectorStoreComponent component",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "SupabaseVectorStoreComponent": {
+    "name": "SupabaseVectorStoreComponent",
+    "display_name": "Supabase",
+    "description": "Supabase Vector Store with search capabilities",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "UpstashVectorStoreComponent": {
+    "name": "UpstashVectorStoreComponent",
+    "display_name": "Upstash",
+    "description": "Upstash Vector Store with search capabilities",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "VectaraVectorStoreComponent": {
+    "name": "VectaraVectorStoreComponent",
+    "display_name": "Vectara Customer ID",
+    "description": "VectaraVectorStoreComponent component",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "f",
+      "f"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "VectaraRagComponent": {
+    "name": "VectaraRagComponent",
+    "display_name": "Vectara RAG",
+    "description": "Vectara",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Message"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "WeaviateVectorStoreComponent": {
+    "name": "WeaviateVectorStoreComponent",
+    "display_name": "Weaviate",
+    "description": "Weaviate Vector Store with search capabilities",
+    "category": "VECTORSTORES",
+    "primary_use_cases": [
+      "search",
+      "embeddings",
+      "vector_database"
+    ],
+    "input_types": [],
+    "output_types": [
+      "Weaviate",
+      "data"
+    ],
+    "common_connections": [
+      "EMBEDDINGS",
+      "AGENTS",
+      "PROCESSING"
+    ],
+    "ai_selection_keywords": [
+      "document",
+      "search",
+      "embedding",
+      "database",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "ChatVertexAIComponent": {
+    "name": "ChatVertexAIComponent",
+    "display_name": "Vertex AI",
+    "description": "Generate text using Vertex AI LLMs.",
+    "category": "VERTEXAI",
+    "primary_use_cases": [
+      "chat",
+      "embeddings"
+    ],
+    "input_types": [],
+    "output_types": [
+      "cast"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document",
+      "embedding"
+    ],
+    "complexity_score": 1
+  },
+  "VertexAIEmbeddingsComponent": {
+    "name": "VertexAIEmbeddingsComponent",
+    "display_name": "Vertex AI Embeddings",
+    "description": "Generate embeddings using Google Cloud Vertex AI models.",
+    "category": "VERTEXAI",
+    "primary_use_cases": [
+      "embeddings"
+    ],
+    "input_types": [],
+    "output_types": [
+      "VertexAIEmbeddings"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "embedding"
+    ],
+    "complexity_score": 1
+  },
+  "WikidataComponent": {
+    "name": "WikidataComponent",
+    "display_name": "Wikidata",
+    "description": "Performs a search using the Wikidata API.",
+    "category": "WIKIPEDIA",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search",
+      "api"
+    ],
+    "complexity_score": 1
+  },
+  "WikipediaComponent": {
+    "name": "WikipediaComponent",
+    "display_name": "Wikipedia",
+    "description": "Call Wikipedia API.",
+    "category": "WIKIPEDIA",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "WikipediaAPIWrapper",
+      "DataFrame",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "api",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "WolframAlphaAPIComponent": {
+    "name": "WolframAlphaAPIComponent",
+    "display_name": "WolframAlpha API",
+    "description": "Answers mathematical questions.",
+    "category": "WOLFRAMALPHA",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "Tool",
+      "WolframAlphaAPIWrapper",
+      "DataFrame",
+      "data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 2
+  },
+  "XAIModelComponent": {
+    "name": "XAIModelComponent",
+    "display_name": "xAI",
+    "description": "Generates text using xAI models like Grok.",
+    "category": "XAI",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "sorted",
+      "f"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "document"
+    ],
+    "complexity_score": 1
+  },
+  "YfinanceComponent": {
+    "name": "YfinanceComponent",
+    "display_name": "Yahoo! Finance",
+    "description": "The stock symbol to retrieve data for.",
+    "category": "YAHOOSEARCH",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "error_message",
+      "error_message"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search"
+    ],
+    "complexity_score": 2
+  },
+  "YouTubeChannelComponent": {
+    "name": "YouTubeChannelComponent",
+    "display_name": "Channel URL or ID",
+    "description": "YouTubeChannelComponent component",
+    "category": "YOUTUBE",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame",
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search"
+    ],
+    "complexity_score": 2
+  },
+  "YouTubeCommentsComponent": {
+    "name": "YouTubeCommentsComponent",
+    "display_name": "Video URL",
+    "description": "YouTubeCommentsComponent component",
+    "category": "YOUTUBE",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search"
+    ],
+    "complexity_score": 1
+  },
+  "YouTubePlaylistComponent": {
+    "name": "YouTubePlaylistComponent",
+    "display_name": "YouTube Playlist",
+    "description": "Extracts all video URLs from a YouTube playlist.",
+    "category": "YOUTUBE",
+    "primary_use_cases": [],
+    "input_types": [],
+    "output_types": [
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [],
+    "complexity_score": 1
+  },
+  "YouTubeSearchComponent": {
+    "name": "YouTubeSearchComponent",
+    "display_name": "Search Query",
+    "description": "YouTubeSearchComponent component",
+    "category": "YOUTUBE",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search"
+    ],
+    "complexity_score": 1
+  },
+  "YouTubeTrendingComponent": {
+    "name": "YouTubeTrendingComponent",
+    "display_name": "YouTube API Key",
+    "description": "US",
+    "category": "YOUTUBE",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame",
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search"
+    ],
+    "complexity_score": 2
+  },
+  "YouTubeVideoDetailsComponent": {
+    "name": "YouTubeVideoDetailsComponent",
+    "display_name": "Video URL",
+    "description": "YouTubeVideoDetailsComponent component",
+    "category": "YOUTUBE",
+    "primary_use_cases": [
+      "search"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame",
+      "DataFrame",
+      "DataFrame"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "search"
+    ],
+    "complexity_score": 2
+  },
+  "YouTubeTranscriptsComponent": {
+    "name": "YouTubeTranscriptsComponent",
+    "display_name": "Video URL",
+    "description": "YouTubeTranscriptsComponent component",
+    "category": "YOUTUBE",
+    "primary_use_cases": [
+      "document_processing"
+    ],
+    "input_types": [],
+    "output_types": [
+      "DataFrame",
+      "DataFrame",
+      "Message",
+      "Message",
+      "Data",
+      "Data",
+      "Data"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "document",
+      "processing"
+    ],
+    "complexity_score": 2
+  },
+  "ZepChatMemory": {
+    "name": "ZepChatMemory",
+    "display_name": "Zep Chat Memory",
+    "description": "Retrieves and store chat messages from Zep.",
+    "category": "ZEP",
+    "primary_use_cases": [
+      "chat"
+    ],
+    "input_types": [],
+    "output_types": [
+      "ZepChatMessageHistory"
+    ],
+    "common_connections": [],
+    "ai_selection_keywords": [
+      "chat",
+      "search",
+      "database"
+    ],
+    "complexity_score": 1
+  }
+}
