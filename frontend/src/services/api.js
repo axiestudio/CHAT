@@ -70,4 +70,25 @@ export const healthCheck = async () => {
   }
 };
 
+// Chat API endpoints for Real AxieStudio AI Chat
+export const chatAPI = {
+  // Send a message to the AI chat system
+  sendMessage: async (message) => {
+    const response = await api.post('/chat', { message });
+    return response.data;
+  },
+
+  // Get chat conversation history
+  getHistory: async () => {
+    const response = await api.get('/chat/history');
+    return response.data;
+  },
+
+  // Clear chat conversation history
+  clearHistory: async () => {
+    const response = await api.post('/chat/clear');
+    return response.data;
+  }
+};
+
 export default api;

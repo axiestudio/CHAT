@@ -27,10 +27,10 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">
-                AxieStudio AI Flow Generator
+                AxieStudio AI Chat
               </h1>
               <p className="text-sm text-gray-500">
-                Create powerful flows with natural language
+                Real conversational AI for authentic AxieStudio flows
               </p>
             </div>
           </Link>

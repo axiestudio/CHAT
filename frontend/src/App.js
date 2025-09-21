@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Header from './components/Header';
 import FlowGenerator from './pages/FlowGenerator';
+import RealChatInterface from './components/RealChatInterface';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         <Header />
         <main className="container mx-auto px-4 py-8">
           <Routes>
-            <Route path="/" element={<FlowGenerator />} />
+            <Route path="/" element={<RealChatInterface />} />
+            <Route path="/legacy" element={<FlowGenerator />} />
           </Routes>
         </main>
         <Toaster 
