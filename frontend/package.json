@@ -48,6 +48,5 @@
   "devDependencies": {
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18"
-  },
-  "proxy": "http://localhost:8000"
+  }
 }
