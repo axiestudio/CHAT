@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="330" height="326" viewBox="0 0 330 326">
+<defs>
+  <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+    <stop offset="50%" style="stop-color:#7C3AED;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+  </linearGradient>
+  <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+  </linearGradient>
+</defs>
+
+<!-- Background -->
+<rect width="330" height="326" fill="url(#gradient1)" rx="24" ry="24"/>
+
+<!-- Main Logo Shape -->
+<g transform="translate(65, 65)">
+  <!-- Central Circle -->
+  <circle cx="100" cy="98" r="45" fill="url(#gradient2)" opacity="0.9"/>
+  
+  <!-- Flow Nodes -->
+  <circle cx="50" cy="50" r="18" fill="#FFFFFF" opacity="0.95"/>
+  <circle cx="150" cy="50" r="18" fill="#FFFFFF" opacity="0.95"/>
+  <circle cx="50" cy="146" r="18" fill="#FFFFFF" opacity="0.95"/>
+  <circle cx="150" cy="146" r="18" fill="#FFFFFF" opacity="0.95"/>
+  
+  <!-- Connection Lines -->
+  <path d="M68 50 Q100 30 132 50" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M50 68 Q30 98 50 128" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M150 68 Q170 98 150 128" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M68 146 Q100 166 132 146" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.8"/>
+  
+  <!-- Central connections -->
+  <path d="M82 82 L118 114" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+  <path d="M118 82 L82 114" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+  
+  <!-- AI Symbol in center -->
+  <text x="100" y="105" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="bold">AI</text>
+</g>
+
+<!-- Brand Text -->
+<text x="165" y="280" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="28" font-weight="bold">AxieStudio</text>
+<text x="165" y="305" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="14" opacity="0.9">AI Flow Generator</text>
+</svg>
