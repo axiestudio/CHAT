@@ -1,15 +1,26 @@
 {
-  "buildCommand": "cd frontend && npm run build",
-  "outputDirectory": "frontend/build",
-  "installCommand": "cd frontend && npm install",
-  "devCommand": "cd frontend && npm start",
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": {
+        "cache-control": "s-maxage=31536000,immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
   "env": {
     "REACT_APP_API_URL": "https://worthwhile-pelican-axiestudio-7ed1c7d6.koyeb.app/api/v1"
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  }
 }

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "AxieStudio AI Flow Generator - Full Stack Application",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
+    "build": "echo 'Building from root - this should not be called'",
     "start": "cd frontend && npm start",
     "install-frontend": "cd frontend && npm install",
     "install-backend": "cd backend && pip install -r requirements.txt"
