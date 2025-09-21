@@ -9,7 +9,9 @@ from pathlib import Path
 from typing import Dict, Any, List
 
 # Add axiestudio_core to path
-sys.path.append(str(Path(__file__).parent.parent / "axiestudio_core"))
+axiestudio_core_path = str(Path(__file__).parent.parent.parent / "axiestudio_core")
+sys.path.insert(0, axiestudio_core_path)
+print(f"DEBUG: Added to path: {axiestudio_core_path}")
 
 try:
     from ai.template_flow_generator import template_generator
